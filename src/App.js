@@ -4,8 +4,9 @@ import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
-Amplify.configure(aws_exports);
 import VideoPlayer from 'react-video-js-player';
+
+Amplify.configure(aws_exports);
 
 const videoSrc = "https://d3ua3db7fl9pwc.cloudfront.net/restinga/main.m3u8"
 const poster= "https://echoboomer.pt/wp-content/uploads/2021/07/meo-beachcam.jpg"
