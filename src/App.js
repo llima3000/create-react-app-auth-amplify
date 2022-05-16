@@ -5,26 +5,22 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import Amplify from 'aws-amplify';
 import aws_exports from './aws-exports';
 Amplify.configure(aws_exports);
+import VideoPlayer from 'react-video-js-player';
+
+const videoSrc = "https://d3ua3db7fl9pwc.cloudfront.net/restinga/main.m3u8"
+const poster= "https://echoboomer.pt/wp-content/uploads/2021/07/meo-beachcam.jpg"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <AmplifySignOut />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <h1>Video Beach</h1>
+      <VideoPlayer 
+          src={videoSrc}
+          poster={poster}
+          width="720"
+          height="420"
+      />
       </div>
     );
   }
