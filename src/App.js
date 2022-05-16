@@ -20,6 +20,7 @@ class App extends Component {
       <VideoPlayer 
           src={videoSrc}
           poster={poster}
+          controls
           width="720"
           height="420"
       />
