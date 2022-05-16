@@ -15,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <AmplifySignOut />
       <h1>Video Beach</h1>
       <VideoPlayer 
           src={videoSrc}
